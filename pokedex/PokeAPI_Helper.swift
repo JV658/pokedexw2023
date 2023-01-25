@@ -30,19 +30,10 @@ class PokeAPI_Helper {
         
         let (data, response) = try await URLSession.shared.data(from: url)
         
-//        let jsonObject = try JSONSerialization.jsonObject(with: data, options: [])
-        
         let decoder = JSONDecoder()
         
         let pokedex = try decoder.decode(Pokedex.self, from: data)
         
-//        guard
-//            let jsonDictionary = jsonObject as? [AnyHashable:Any],
-//            let results = jsonDictionary["results"] as? [[String: String]]
-//        else {
-//            print(jsonObject)
-//            throw PokeAPI_Errors.CannotParseJSONData }
-
         return pokedex
     }
     
