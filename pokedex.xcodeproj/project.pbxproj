@@ -14,6 +14,8 @@
 		DB204E1629758AC20054F93B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB204E1529758AC20054F93B /* Assets.xcassets */; };
 		DB204E1929758AC20054F93B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB204E1729758AC20054F93B /* LaunchScreen.storyboard */; };
 		DB204E2129758B020054F93B /* PokeAPI_Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB204E2029758B020054F93B /* PokeAPI_Helper.swift */; };
+		DB6C7C07298B0D53009A4982 /* PokeImageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C7C06298B0D53009A4982 /* PokeImageCollectionViewController.swift */; };
+		DB6C7C09298B122B009A4982 /* PokeImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C7C08298B122B009A4982 /* PokeImageCollectionViewCell.swift */; };
 		DB9F86FA2981D1770038CA89 /* PokedexTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F86F92981D1770038CA89 /* PokedexTableViewController.swift */; };
 		DB9F86FC2981D7280038CA89 /* PokemonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F86FB2981D7280038CA89 /* PokemonViewController.swift */; };
 		DBC7D7CD297897BE009D9891 /* SwapiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC7D7CC297897BE009D9891 /* SwapiHelper.swift */; };
@@ -30,6 +32,8 @@
 		DB204E1829758AC20054F93B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB204E1A29758AC20054F93B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB204E2029758B020054F93B /* PokeAPI_Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeAPI_Helper.swift; sourceTree = "<group>"; };
+		DB6C7C06298B0D53009A4982 /* PokeImageCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeImageCollectionViewController.swift; sourceTree = "<group>"; };
+		DB6C7C08298B122B009A4982 /* PokeImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		DB9F86F92981D1770038CA89 /* PokedexTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexTableViewController.swift; sourceTree = "<group>"; };
 		DB9F86FB2981D7280038CA89 /* PokemonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonViewController.swift; sourceTree = "<group>"; };
 		DBC7D7CC297897BE009D9891 /* SwapiHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapiHelper.swift; sourceTree = "<group>"; };
@@ -74,6 +78,8 @@
 				DB204E2029758B020054F93B /* PokeAPI_Helper.swift */,
 				DBC7D7CC297897BE009D9891 /* SwapiHelper.swift */,
 				DB204E1229758AC10054F93B /* Main.storyboard */,
+				DB6C7C06298B0D53009A4982 /* PokeImageCollectionViewController.swift */,
+				DB6C7C08298B122B009A4982 /* PokeImageCollectionViewCell.swift */,
 				DB9F86FB2981D7280038CA89 /* PokemonViewController.swift */,
 				DB204E1529758AC20054F93B /* Assets.xcassets */,
 				DB204E1729758AC20054F93B /* LaunchScreen.storyboard */,
@@ -154,8 +160,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBC7D7CD297897BE009D9891 /* SwapiHelper.swift in Sources */,
+				DB6C7C09298B122B009A4982 /* PokeImageCollectionViewCell.swift in Sources */,
 				DB204E1129758AC10054F93B /* ViewController.swift in Sources */,
 				DBC7D7CF297EC523009D9891 /* PokemonCodable.swift in Sources */,
+				DB6C7C07298B0D53009A4982 /* PokeImageCollectionViewController.swift in Sources */,
 				DB204E0D29758AC10054F93B /* AppDelegate.swift in Sources */,
 				DB204E0F29758AC10054F93B /* SceneDelegate.swift in Sources */,
 				DB204E2129758B020054F93B /* PokeAPI_Helper.swift in Sources */,

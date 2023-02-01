@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -61,11 +62,11 @@
                                 <rect key="frame" x="8" y="111" width="377" height="407"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" horizontalHuggingPriority="245" verticalHuggingPriority="245" horizontalCompressionResistancePriority="745" verticalCompressionResistancePriority="745" translatesAutoresizingMaskIntoConstraints="NO" id="JnP-Z4-KW3">
-                                        <rect key="frame" x="0.0" y="0.0" width="377" height="141.66666666666666"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="377" height="99.333333333333329"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bKp-7C-q10">
-                                        <rect key="frame" x="0.0" y="149.66666666666669" width="377" height="144"/>
+                                        <rect key="frame" x="0.0" y="107.33333333333334" width="377" height="144"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JBE-IH-fPU">
                                                 <rect key="frame" x="124.66666666666666" y="9.6666666666666643" width="128" height="125.33333333333334"/>
@@ -82,6 +83,14 @@
                                             <constraint firstItem="JBE-IH-fPU" firstAttribute="centerX" secondItem="bKp-7C-q10" secondAttribute="centerX" id="J46-gl-qKs"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBM-e9-Gxh">
+                                        <rect key="frame" x="0.0" y="259.33333333333331" width="377" height="34.333333333333314"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="more&gt;"/>
+                                        <connections>
+                                            <segue destination="BYL-fD-LZi" kind="show" id="BYG-WV-5QQ"/>
+                                        </connections>
+                                    </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rdh-5C-1R1">
                                         <rect key="frame" x="0.0" y="301.66666666666669" width="377" height="20.333333333333314"/>
                                         <subviews>
@@ -174,6 +183,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="83x-5t-A69" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1993" y="-80"/>
+        </scene>
+        <!--Poke Image Collection View Controller-->
+        <scene sceneID="A8i-Be-wrl">
+            <objects>
+                <collectionViewController id="BYL-fD-LZi" customClass="PokeImageCollectionViewController" customModule="pokedex" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="IED-OO-t8G">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IRq-p0-ZeG">
+                            <size key="itemSize" width="64" height="64"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="pokeImage" id="9i7-U0-w6x" customClass="PokeImageCollectionViewCell" customModule="pokedex" customModuleProvider="target">
+                                <rect key="frame" x="10" y="0.0" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="M2C-Wg-ERE">
+                                    <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OK9-JK-P84">
+                                            <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="64" id="EGL-DC-b7t"/>
+                                                <constraint firstAttribute="height" constant="64" id="IIU-iI-zdq"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="OK9-JK-P84" secondAttribute="trailing" id="2BK-IQ-ULp"/>
+                                        <constraint firstItem="OK9-JK-P84" firstAttribute="leading" secondItem="M2C-Wg-ERE" secondAttribute="leading" id="Vvb-6J-8ON"/>
+                                        <constraint firstAttribute="bottom" secondItem="OK9-JK-P84" secondAttribute="bottom" id="g7c-sF-9Zs"/>
+                                        <constraint firstItem="OK9-JK-P84" firstAttribute="top" secondItem="M2C-Wg-ERE" secondAttribute="top" id="yav-ii-QLu"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="pokeImageView" destination="OK9-JK-P84" id="MBi-Ct-o9N"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="BYL-fD-LZi" id="2uF-y2-oDE"/>
+                            <outlet property="delegate" destination="BYL-fD-LZi" id="34h-up-WwQ"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="MYR-gs-gbA"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3jN-ML-4ZH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2925.9541984732823" y="-80.281690140845072"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rCb-HT-6tN">

@@ -38,9 +38,14 @@ class PokeAPI_Helper {
     }
     
     static func fetchPokeDetails(pokeURL: String) async throws -> PokeDetails{
+        print(#function)
         guard
             let url = URL(string: pokeURL)
         else { throw PokeAPI_Errors.unableToConvertURL}
+        
+        for _ in 0...10000000{
+            continue
+        }
         
         let (data, response) = try await URLSession.shared.data(from: url)
         
@@ -52,6 +57,7 @@ class PokeAPI_Helper {
     }
     
     static func fetchPokeImage(pokeImageURLString: String) async throws -> Data {
+        print(#function)
         guard
             let url = URL(string: pokeImageURLString)
         else { throw PokeAPI_Errors.unableToConvertURL}

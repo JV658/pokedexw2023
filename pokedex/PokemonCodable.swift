@@ -27,5 +27,8 @@ struct PokeDetails: Codable{
 
 struct Sprite: Codable {
     var front_default: String?
+    var front_female: String?
+    var back_default: String?
+    var back_female: String?
 }
 
