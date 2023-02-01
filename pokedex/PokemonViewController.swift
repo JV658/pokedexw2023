@@ -13,10 +13,32 @@ class PokemonViewController: UIViewController {
     @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    
+    var pokemonURL: String!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        Task {
+            do{
+                let pokeDatails = try await PokeAPI_Helper.fetchPokeDetails(pokeURL: pokemonURL)
+                weightLabel.text = String(pokeDatails.weight)
+                heightLabel.text = String(pokeDatails.height)
+                nameLabel.text = pokeDatails.name
+                idLabel.text = String(pokeDatails.id)
+                if let imageURLString = pokeDatails.sprites.front_default {
+                    let imageData = try await PokeAPI_Helper.fetchPokeImage(pokeImageURLString: imageURLString)
+                    imageView.image = UIImage(data: imageData)
+                }
+            } catch let err {
+                print("Error: \(err)")
+            }
+        }
+        
     }
     
 

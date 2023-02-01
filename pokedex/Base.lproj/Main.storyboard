@@ -60,9 +60,27 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="awi-7g-4jN">
                                 <rect key="frame" x="8" y="111" width="377" height="407"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JnP-Z4-KW3">
-                                        <rect key="frame" x="0.0" y="0.0" width="377" height="293.66666666666669"/>
+                                    <view contentMode="scaleToFill" horizontalHuggingPriority="245" verticalHuggingPriority="245" horizontalCompressionResistancePriority="745" verticalCompressionResistancePriority="745" translatesAutoresizingMaskIntoConstraints="NO" id="JnP-Z4-KW3">
+                                        <rect key="frame" x="0.0" y="0.0" width="377" height="141.66666666666666"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bKp-7C-q10">
+                                        <rect key="frame" x="0.0" y="149.66666666666669" width="377" height="144"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JBE-IH-fPU">
+                                                <rect key="frame" x="124.66666666666666" y="9.6666666666666643" width="128" height="125.33333333333334"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="128" id="3Eu-f2-EPq"/>
+                                                    <constraint firstAttribute="width" constant="128" id="79R-Nz-sYi"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="JBE-IH-fPU" firstAttribute="top" secondItem="bKp-7C-q10" secondAttribute="top" constant="8" id="5rz-tP-UJT"/>
+                                            <constraint firstAttribute="bottom" secondItem="JBE-IH-fPU" secondAttribute="bottom" constant="8" id="Hfg-s6-Qll"/>
+                                            <constraint firstItem="JBE-IH-fPU" firstAttribute="centerX" secondItem="bKp-7C-q10" secondAttribute="centerX" id="J46-gl-qKs"/>
+                                        </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rdh-5C-1R1">
                                         <rect key="frame" x="0.0" y="301.66666666666669" width="377" height="20.333333333333314"/>
@@ -148,13 +166,14 @@
                     <connections>
                         <outlet property="heightLabel" destination="c8G-pB-WUZ" id="Fvb-iJ-9QB"/>
                         <outlet property="idLabel" destination="5ap-cV-LxQ" id="InE-KK-Fvo"/>
+                        <outlet property="imageView" destination="JBE-IH-fPU" id="AvZ-rW-fKN"/>
                         <outlet property="nameLabel" destination="d4t-Y6-rHk" id="wuz-q8-ApE"/>
                         <outlet property="weightLabel" destination="xNU-G5-3Xe" id="EJG-1H-cqk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="83x-5t-A69" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1993.1297709923663" y="-102.11267605633803"/>
+            <point key="canvasLocation" x="1993" y="-80"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rCb-HT-6tN">
@@ -176,6 +195,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="person" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

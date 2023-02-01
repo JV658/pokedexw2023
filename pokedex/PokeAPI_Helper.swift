@@ -37,6 +37,30 @@ class PokeAPI_Helper {
         return pokedex
     }
     
+    static func fetchPokeDetails(pokeURL: String) async throws -> PokeDetails{
+        guard
+            let url = URL(string: pokeURL)
+        else { throw PokeAPI_Errors.unableToConvertURL}
+        
+        let (data, response) = try await URLSession.shared.data(from: url)
+        
+        let decoder = JSONDecoder()
+        
+        let pokeDetails = try decoder.decode(PokeDetails.self, from: data)
+        
+        return pokeDetails
+    }
+    
+    static func fetchPokeImage(pokeImageURLString: String) async throws -> Data {
+        guard
+            let url = URL(string: pokeImageURLString)
+        else { throw PokeAPI_Errors.unableToConvertURL}
+        
+        let (data, _) = try await URLSession.shared.data(from: url)
+                
+        return data
+    }
+    
     
     
     
