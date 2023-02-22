@@ -28,7 +28,9 @@ class PokeAPI_Helper {
             let url = URL(string: urlString)
         else { throw PokeAPI_Errors.unableToConvertURL}
         
-        let (data, response) = try await URLSession.shared.data(from: url)
+        let request = URLRequest(url:url, cachePolicy: .reloadIgnoringLocalCacheData)
+        
+        let (data, _) = try await URLSession.shared.data(for: request)
         
         let decoder = JSONDecoder()
         
